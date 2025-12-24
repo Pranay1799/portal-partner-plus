@@ -1,12 +1,13 @@
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { StatsCard } from "@/components/dashboard/StatsCard";
-import { TaskList } from "@/components/dashboard/TaskList";
+import { UploadSection } from "@/components/dashboard/UploadSection";
 import { DocumentList } from "@/components/dashboard/DocumentList";
 import { ServiceOverview } from "@/components/dashboard/ServiceOverview";
 import { RemindersPanel } from "@/components/dashboard/RemindersPanel";
 import { TicketingSystem } from "@/components/dashboard/TicketingSystem";
 import { CommunicationsPanel } from "@/components/dashboard/CommunicationsPanel";
 import { FinancialDashboard } from "@/components/dashboard/FinancialDashboard";
+import { MomTaskStats } from "@/components/dashboard/MomTaskStats";
 import { Clock, FileText, TrendingUp, Ticket } from "lucide-react";
 
 const Index = () => {
@@ -22,7 +23,7 @@ const Index = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
           <StatsCard
             title="Active Tasks"
             value={4}
@@ -51,6 +52,7 @@ const Index = () => {
             trend="Out of 6 available"
             variant="default"
           />
+          <MomTaskStats />
         </div>
 
         {/* Financial Dashboard */}
@@ -59,7 +61,7 @@ const Index = () => {
         {/* Main Content Grid */}
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="space-y-6">
-            <TaskList />
+            <UploadSection />
             <ServiceOverview />
           </div>
           <div className="space-y-6">
