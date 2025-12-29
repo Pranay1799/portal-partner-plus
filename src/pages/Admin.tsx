@@ -5,7 +5,9 @@ import { ClientsOverview } from "@/components/admin/ClientsOverview";
 import { ClientDetails } from "@/components/admin/ClientDetails";
 import { SystemStats } from "@/components/admin/SystemStats";
 import { ActivityLog } from "@/components/admin/ActivityLog";
+import { ServiceManagement } from "@/components/admin/ServiceManagement";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Admin = () => {
   const [selectedClient, setSelectedClient] = useState<string | null>(null);
@@ -45,7 +47,22 @@ const Admin = () => {
                   />
                 </div>
                 <div className="lg:col-span-2">
-                  <ClientDetails clientId={selectedClient} />
+                  {selectedClient ? (
+                    <Tabs defaultValue="details" className="space-y-4">
+                      <TabsList>
+                        <TabsTrigger value="details">Client Details</TabsTrigger>
+                        <TabsTrigger value="services">Services & Staff</TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="details">
+                        <ClientDetails clientId={selectedClient} />
+                      </TabsContent>
+                      <TabsContent value="services">
+                        <ServiceManagement clientId={selectedClient} />
+                      </TabsContent>
+                    </Tabs>
+                  ) : (
+                    <ClientDetails clientId={selectedClient} />
+                  )}
                 </div>
               </div>
             )}

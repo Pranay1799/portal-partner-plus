@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Search, MoreVertical, Circle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -12,8 +11,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
+import { AddClientDialog } from "./AddClientDialog";
 interface Client {
   id: string;
   name: string;
@@ -113,7 +113,10 @@ export function ClientsOverview({ onSelectClient, selectedClient }: ClientsOverv
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg font-semibold">Clients</CardTitle>
-          <Badge variant="outline">{mockClients.length} total</Badge>
+          <div className="flex items-center gap-2">
+            <Badge variant="outline">{mockClients.length} total</Badge>
+            <AddClientDialog />
+          </div>
         </div>
         <div className="relative mt-2">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
