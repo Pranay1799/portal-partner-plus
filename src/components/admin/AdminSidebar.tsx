@@ -4,7 +4,8 @@ import {
   Activity, 
   Settings,
   LogOut,
-  Shield
+  Shield,
+  Briefcase
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -31,6 +32,7 @@ interface AdminSidebarProps {
 const menuItems = [
   { id: "overview", title: "Dashboard", icon: LayoutDashboard },
   { id: "clients", title: "Clients", icon: Users },
+  { id: "services", title: "Services", icon: Briefcase },
   { id: "activity", title: "Activity Log", icon: Activity },
   { id: "settings", title: "Settings", icon: Settings },
 ];
