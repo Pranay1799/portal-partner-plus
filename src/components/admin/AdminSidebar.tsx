@@ -5,7 +5,9 @@ import {
   Settings,
   LogOut,
   Shield,
-  Briefcase
+  Briefcase,
+  Ticket,
+  FileText
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -33,6 +35,8 @@ const menuItems = [
   { id: "overview", title: "Dashboard", icon: LayoutDashboard },
   { id: "clients", title: "Clients", icon: Users },
   { id: "services", title: "Services", icon: Briefcase },
+  { id: "tickets", title: "Tickets", icon: Ticket },
+  { id: "articles", title: "Articles", icon: FileText },
   { id: "activity", title: "Activity Log", icon: Activity },
   { id: "settings", title: "Settings", icon: Settings },
 ];

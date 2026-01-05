@@ -6,8 +6,9 @@ import { ClientDetails } from "@/components/admin/ClientDetails";
 import { SystemStats } from "@/components/admin/SystemStats";
 import { ActivityLog } from "@/components/admin/ActivityLog";
 import { GlobalServicesManagement } from "@/components/admin/GlobalServicesManagement";
+import { TicketManagement } from "@/components/admin/TicketManagement";
+import { ArticleManagement } from "@/components/admin/ArticleManagement";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Admin = () => {
   const [selectedClient, setSelectedClient] = useState<string | null>(null);
@@ -54,6 +55,14 @@ const Admin = () => {
 
             {activeSection === "services" && (
               <GlobalServicesManagement />
+            )}
+
+            {activeSection === "tickets" && (
+              <TicketManagement />
+            )}
+
+            {activeSection === "articles" && (
+              <ArticleManagement />
             )}
             
             {activeSection === "activity" && (
