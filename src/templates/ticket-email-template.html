@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Support Ticket</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7fa;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td align="center" style="padding: 40px 0;">
+        <table role="presentation" style="width: 600px; border-collapse: collapse; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          
+          <!-- Header -->
+          <tr>
+            <td style="padding: 40px 40px 20px; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px 12px 0 0;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 600;">
+                🎫 New Support Ticket
+              </h1>
+              <p style="margin: 10px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px;">
+                A new ticket has been submitted and requires your attention
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Ticket Details -->
+          <tr>
+            <td style="padding: 30px 40px;">
+              <!-- Ticket ID Badge -->
+              <table role="presentation" style="width: 100%; margin-bottom: 25px;">
+                <tr>
+                  <td>
+                    <span style="display: inline-block; background-color: #eef2ff; color: #667eea; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                      Ticket ID: {{TICKET_ID}}
+                    </span>
+                    <span style="display: inline-block; background-color: #fef3c7; color: #d97706; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-left: 8px;">
+                      {{PRIORITY}} Priority
+                    </span>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Subject -->
+              <table role="presentation" style="width: 100%; margin-bottom: 20px;">
+                <tr>
+                  <td style="padding: 20px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #667eea;">
+                    <p style="margin: 0 0 5px; color: #64748b; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Subject</p>
+                    <p style="margin: 0; color: #1e293b; font-size: 18px; font-weight: 600;">{{TICKET_SUBJECT}}</p>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Details Grid -->
+              <table role="presentation" style="width: 100%; margin-bottom: 25px;">
+                <tr>
+                  <td style="width: 50%; padding: 15px; background-color: #f8fafc; border-radius: 8px 0 0 8px;">
+                    <p style="margin: 0 0 5px; color: #64748b; font-size: 12px; font-weight: 600; text-transform: uppercase;">Service</p>
+                    <p style="margin: 0; color: #1e293b; font-size: 14px; font-weight: 500;">{{SERVICE_NAME}}</p>
+                  </td>
+                  <td style="width: 50%; padding: 15px; background-color: #f8fafc; border-radius: 0 8px 8px 0;">
+                    <p style="margin: 0 0 5px; color: #64748b; font-size: 12px; font-weight: 600; text-transform: uppercase;">Category</p>
+                    <p style="margin: 0; color: #1e293b; font-size: 14px; font-weight: 500;">{{CATEGORY}}</p>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Client Information -->
+              <table role="presentation" style="width: 100%; margin-bottom: 25px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                <tr>
+                  <td style="padding: 20px;">
+                    <p style="margin: 0 0 15px; color: #1e293b; font-size: 14px; font-weight: 600;">
+                      👤 Client Information
+                    </p>
+                    <table role="presentation" style="width: 100%;">
+                      <tr>
+                        <td style="padding: 8px 0; border-bottom: 1px solid #f1f5f9;">
+                          <span style="color: #64748b; font-size: 13px;">Name:</span>
+                          <span style="color: #1e293b; font-size: 13px; font-weight: 500; float: right;">{{CLIENT_NAME}}</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; border-bottom: 1px solid #f1f5f9;">
+                          <span style="color: #64748b; font-size: 13px;">Email:</span>
+                          <span style="color: #1e293b; font-size: 13px; font-weight: 500; float: right;">{{CLIENT_EMAIL}}</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0;">
+                          <span style="color: #64748b; font-size: 13px;">Submitted:</span>
+                          <span style="color: #1e293b; font-size: 13px; font-weight: 500; float: right;">{{SUBMISSION_DATE}}</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Description -->
+              <table role="presentation" style="width: 100%; margin-bottom: 30px;">
+                <tr>
+                  <td>
+                    <p style="margin: 0 0 10px; color: #1e293b; font-size: 14px; font-weight: 600;">
+                      📝 Description
+                    </p>
+                    <div style="padding: 20px; background-color: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+                      <p style="margin: 0; color: #475569; font-size: 14px; line-height: 1.6;">
+                        {{TICKET_DESCRIPTION}}
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- CTA Button -->
+              <table role="presentation" style="width: 100%;">
+                <tr>
+                  <td align="center">
+                    <a href="{{ADMIN_DASHBOARD_URL}}" style="display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; border-radius: 8px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);">
+                      View Ticket in Dashboard →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 30px 40px; background-color: #f8fafc; border-radius: 0 0 12px 12px; text-align: center;">
+              <p style="margin: 0 0 10px; color: #64748b; font-size: 13px;">
+                This is an automated notification from your support system.
+              </p>
+              <p style="margin: 0; color: #94a3b8; font-size: 12px;">
+                © {{CURRENT_YEAR}} Your Company Name. All rights reserved.
+              </p>
+            </td>
+          </tr>
+          
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
